@@ -13,9 +13,9 @@ export class QuoteComponent implements OnInit {
     ]
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
-}
+  ngOnInit(): void {
+
+  }
