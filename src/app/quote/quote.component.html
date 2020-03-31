@@ -1,8 +1,14 @@
-<div>
+<div class = "container">
   <h1>Quotes App</h1>
   <ul>
       <li *ngFor=' let quotes of quote'>
         {{quotes.name}}
+
+        <button (click)='toggleDetails(i)'>Show Details</button>
+
+
+
+        <app-quote-detail *ngIf= 'quote.showAuthor' [quotes]='quote'></app-quote-detail>
       </li>
   </ul>
 </div>

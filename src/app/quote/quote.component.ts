@@ -8,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class QuoteComponent implements OnInit {
 
-    quote:Quotes[] = [
-      {id:1, name: 'If you are good at something, never do it for free', author:'The Joker'}
-    ]
-  }
+  quote:Quotes[] = [
+    {id:1, name: , author:}
 
-  constructor() {
-  }
+    new Quotes(1,'If you are good at something, never do it for free' ,'The Joker'),
+  ]
 
-  ngOnInit(): void {
+}
 
-  }
+toggleDetails(index){
+  this.Quotes[index].showAuthor = !this.quotes[index].showAuthor;
+}
+
+constructor() {
+}
+
+ngOnInit(): void {
+
+}
