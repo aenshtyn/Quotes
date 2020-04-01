@@ -19,6 +19,11 @@ export class QuoteComponent implements OnInit {
 toggleDetails(index){
   this.Quotes[index].showAuthor = !this.quotes[index].showAuthor;
 }
+upvoteQuote (isUpvote, index) {
+  if (isUpvote ) {
+    this.quote.
+  }
+}
 
 constructor() {
 }

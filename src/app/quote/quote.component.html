@@ -1,14 +1,16 @@
 <div class = "container">
   <h1>Quotes App</h1>
   <ul>
-      <li *ngFor=' let quotes of quote'>
-        {{quotes.name}}
+  <div *ngFor=' let quotes of quote'>
 
-        <button (click)='toggleDetails(i)'>Show Details</button>
+            <li  {{quotes.name}} </li>
+
+        <button (click)='toggleDetails(i)'>Show Author & Rank </button>
 
 
 
-        <app-quote-detail *ngIf= 'quote.showAuthor' [quotes]='quote'></app-quote-detail>
-      </li>
+        <app-quote-detail *ngIf= 'quote.showAuthor' [quotes]='quote'  (isUpvote) = 'upvoteQuote($event,i)', (isDownvote) = 'downvoteQuote(event,i)'></app-quote-detail>
+
   </ul>
+  </div>
 </div>
