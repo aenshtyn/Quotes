@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
+import { TopvotedDirective } from './topvoted.directive';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
     AppComponent,
     QuoteComponent,
     QuoteDetailComponent,
+    TopvotedDirective,
 
   ],
   imports: [
