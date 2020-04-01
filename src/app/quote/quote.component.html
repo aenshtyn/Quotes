@@ -1,16 +1,25 @@
 <div class = "container">
   <h1>Quotes App</h1>
-  <ul>
-  <div *ngFor=' let quotes of quote'; let i = index >
 
-            <li appTopvoted> {{quotes.name}} was created on {{goal.createdDate|date|italics}}</li>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor=' let quotes of quote'; let i = index >
+        <div>
 
-        <button (click)='toggleDetails(i)'>Show Author & Ranking </button>
+          <h3 id = {{i}} appTopvoted> {{quotes.name}} was created on {{goal.createdDate|date|italics}}</h3>
+
+          <button (click)='toggleDetails(i)' class="btn btn-primary" >Show Author & Ranking </button>
+        </div>
+
+        <div *ngIf= 'quote.showAuthor'>
+          <app-quote-detail  [quotes]='quote'  (isUpvote) = 'upvoteQuote($event,i)', (isDownvote) = 'downvoteQuote(event,i)'></app-quote-detail>
 
 
-
-        <app-quote-detail *ngIf= 'quote.showAuthor' [quotes]='quote'  (isUpvote) = 'upvoteQuote($event,i)', (isDownvote) = 'downvoteQuote(event,i)'></app-quote-detail>
-
-  </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-goal-form></app-goal-form>
+    </div>
   </div>
 </div>
