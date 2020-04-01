@@ -9,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
 
   quote:Quotes[] = [
+
     {id:1, name: , author:}
 
-    new Quotes(1,'If you are good at something, never do it for free' ,'The Joker'),
+    new Quotes(1,'If you are good at something, never do it for free' ,'The Joker', new Date(2012,3,14)),
   ]
 
 }
@@ -25,7 +26,14 @@ upvoteQuote (isUpvote, index) {
   }
 }
 
-constructor() {
+constructor() {  @HostListener("click") onClicks(){
+    this.textDeco("line-through")
+  }
+
+  @HostListener("dblclick") onDoubleClicks(){
+    this.textDeco("None")
+  }
+
 }
 
 ngOnInit(): void {

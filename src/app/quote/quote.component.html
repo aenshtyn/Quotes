@@ -1,11 +1,11 @@
 <div class = "container">
   <h1>Quotes App</h1>
   <ul>
-  <div *ngFor=' let quotes of quote'>
+  <div *ngFor=' let quotes of quote'; let i = index >
 
-            <li  {{quotes.name}} </li>
+            <li appTopvoted> {{quotes.name}} was created on {{goal.createdDate|date|italics}}</li>
 
-        <button (click)='toggleDetails(i)'>Show Author & Rank </button>
+        <button (click)='toggleDetails(i)'>Show Author & Ranking </button>
 
 
 
