@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { TopvotedDirective } from './topvoted.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { TopvotedDirective } from './topvoted.directive';
     QuoteComponent,
     QuoteDetailComponent,
     TopvotedDirective,
+    DateCountPipe,
 
   ],
   imports: [
