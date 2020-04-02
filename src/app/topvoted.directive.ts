@@ -1,11 +1,11 @@
-import { Directive,ElementRef ,HostListener } from '@angular/core';
+import { Directive,ElementRef,HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appTopvoted]'
 })
 export class TopvotedDirective {
 
-  constructor(private elem;ElementRef) {
+  constructor(private elem:ElementRef) {}
   // this.elem.nativeElement.style.textDecoration='underline';
 
   @HostListener("click") onClicks(){

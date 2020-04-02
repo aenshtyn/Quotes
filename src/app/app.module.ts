@@ -10,7 +10,6 @@ import { TopvotedDirective } from './topvoted.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,11 +18,10 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     TopvotedDirective,
     DateCountPipe,
     QuoteFormComponent,
-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],
