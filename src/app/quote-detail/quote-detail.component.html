@@ -1,23 +1,9 @@
 <p>{{quote.author}}</p>
-<p>This quote was created was created on {{quote.createdDate|date|uppercase}}days ago</p>
 
+<p> This quote was created was created {{quote.createdDate|dateCount}} by {{quote.name}}</p>
 
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<button (click)= 'quoteDelete(true)' class="fa fa-trash" style= float:right ></button>
 
-<!-- <button (click)= 'qouteUpvote(true)'>Upvote</button>
-<button (click)= 'quoteDownvote(true)'>Downvote</button>
+<button (click)= 'qouteUpvote(true)' class="fa fa-arrow-up"  >{{quote.upvotes}}</button>
 
-
-<div class="votebox">
-  <span class="fa fa-arrow-up vote up"
-        (click)="upvote()"
-        [ngClass]="{'active' : userVote > 0 }">
-  </span>
-  <span class="vote-count">{{voteCount}}</span>
-
-  <span class="fa fa-arrow-down vote down"
-        (click)="downvote()"
-        [ngClass]="{'active' : userVote < 0 }">
-
-  </span>
-</div> -->
+<button (click)= 'quoteDownvote(true)' class="fa fa-arrow-down"  >{{quote.downvotes}}</button>

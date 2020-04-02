@@ -9,6 +9,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { TopvotedDirective } from './topvoted.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     TopvotedDirective,
     DateCountPipe,
     QuoteFormComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

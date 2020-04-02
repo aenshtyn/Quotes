@@ -1,0 +1,23 @@
+font-family: 'Baloo Thambi 2', cursive;
+font-family: 'Gotu', sans-serif;
+font-family: 'Sen', sans-serif;
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+.container{
+  font-family: 'Sen';
+}
+body {
+  text-transform: lowercase;
+}
+button {
+
+  float: right;
+  font-size: 60%
+
+}
+.footer {
+text-align: center;
+padding: 2rem;
+}

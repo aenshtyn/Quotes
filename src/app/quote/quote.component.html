@@ -1,25 +1,31 @@
-<div class = "container">
-  <h1>Quotes App</h1>
+
+
+
+<div class =  "container" >
+  <h2>My Favourite Quotes</h2>
   <hr>
 
+
   <div class="row">
-    <div class="col-md-6">
-      <div *ngFor=' let quote of quotes;let i = index' >
-        <div>
+    <div *ngFor=' let quote of quotes;let i = index' class = "container" >
 
-          <h3 id = {{i}} appTopvoted> {{quote.lines}} </h3>
-          <button (click)='toggleDetails(i)' class="btn btn-primary" >Show Author & Ranking </button>
-        </div>
+      <div>
+        <p id = {{i}} appHighlight> {{quote.lines}} </p>
 
-        <div *ngIf= 'quote.showAuthor'>
-          <!-- <app-quote-detail  [quote]='quote'  (isUpvote) = 'upvoteQuote($event,i)', (isDownvote) = 'downvoteQuote(event,i)'></app-quote-detail> -->
-  <app-quote-detail  [quote]='quote'  (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-
-        </div>
+        <button (click)='toggleDetails(i)' class="btn-info " > Show Author </button>
       </div>
+
+      <div *ngIf= 'quote.showAuthor'>
+        <!-- <app-quote-detail  [quote]='quote'  (isUpvote) = 'upvoteQuote($event,i)', (isDownvote) = 'downvoteQuote(event,i)'></app-quote-detail> -->
+        <app-quote-detail  [quote]='quote'  (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
     </div>
-    <div class="col-md-6">
-      <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
-    </div>
+
   </div>
+  </div>
+  <hr>
+  <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+
+<div class = "footer">
+  <h6>Made by Aenshtyn <br> 2020</h6>
+</div>
 </div>
