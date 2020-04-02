@@ -10,15 +10,15 @@ import { Quote } from '../quotes';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote [] = [
-    new Quote(1,'Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.' ,'Albert Einstein',  'Moha' , new Date(2012,3,14) , 0 , 0,),
-    new Quote(2,'Life begins when fear of being wrong ends' ,'The Joker',  'Moha' ,new Date(2012,3,14) , 0 , 0,),
-    new Quote(3,'If you are good at something, never do it for free' ,'The Joker',  'Moha' ,new Date(2012,3,14) , 0 , 0,),
-    new Quote(4,'Try not to become a man of success, but rather try to become a man of value.' ,'Albert Einstein',  'Moha' ,new Date(2012,3,14) , 0 , 0,),
+    new Quote(1,'Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.' ,'Albert Einstein',  'Moha' , new Date(1980,3,14) , 0 , 0,),
+    new Quote(2,'Life begins when fear of being wrong ends' ,'The Joker',  'Crystal' ,new Date(2012,3,14) , 0 , 0,),
+    new Quote(3,'If you are good at something, never do it for free' ,'The Joker',  'Ian' ,new Date(2002,3,14) , 0 , 0,),
+    new Quote(4,'Try not to become a man of success, but rather try to become a man of value.' ,'Albert Einstein',  'James' ,new Date(1965,3,14) , 0 , 0,),
     new Quote(5,'Never forget what you are, for surely the world will not. Make it your strength. Then it can never be your weakness. Armour yourself in it, and it will never be used to hurt you.' ,'G. R. R. Martin',  'Moha' ,new Date(2012,3,14) , 0 , 0,),
-    new Quote(6,'The powerful have always preyed on the powerless. That’s how they became powerful in the first place.' ,'Tyrion Lannister',  'Moha' , new Date(2012,3,14) , 0 , 0,),
-    new Quote(7,'The purpose of our lives is to be happy.”' ,'Dalai Lama',  'Moha' ,new Date(2012,3,14) , 0 , 0,),
-    new Quote(8,'If you do not like the road you are walking, start paving another one' ,'Dolly Parton',  'Moha' ,new Date(2012,3,14) , 0 , 0,),
-    new Quote(9,'“The hard part is nt making the decision. It is living with it ','Bruce McGill', 'Moha' , new Date(2012,3,14) , 0 , 0,),
+    new Quote(6,'The powerful have always preyed on the powerless. That’s how they became powerful in the first place.' ,'Tyrion Lannister',  'Moha' , new Date(2015,3,14) , 0 , 0,),
+    new Quote(7,'The purpose of our lives is to be happy.”' ,'Dalai Lama',  'Moha' ,new Date(2017,3,14) , 0 , 0,),
+    new Quote(8,'If you do not like the road you are walking, start paving another one' ,'Dolly Parton',  'Moha' ,new Date(2018,3,14) , 0 , 0,),
+    new Quote(9,'“The hard part is nt making the decision. It is living with it ','Bruce McGill', 'Paul' , new Date(2019,3,14) , 0 , 0,),
   ];
 
   toggleDetails(index){
@@ -38,7 +38,7 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote, index){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
+    quote.createdDate = new Date(quote.createdDate)
     quote.upvotes = 0
     quote.downvotes = 0
     this.quotes.push(quote)
