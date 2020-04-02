@@ -16,8 +16,7 @@
       </div>
 
       <div *ngIf= 'quote.showAuthor'>
-        <!-- <app-quote-detail  [quote]='quote'  (isUpvote) = 'upvoteQuote($event,i)', (isDownvote) = 'downvoteQuote(event,i)'></app-quote-detail> -->
-        <app-quote-detail  [quote]='quote'  (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+          <app-quote-detail  [quote]='quote'  (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
     </div>
 
   </div>

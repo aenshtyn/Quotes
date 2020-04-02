@@ -34,11 +34,6 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  // upvoteQuote (isUpvote, index) {
-  //   if (isUpvote ) {
-  //     this.quotes.
-  //   }
-  // }
 
   addNewQuote(quote, index){
     let quoteLength = this.quotes.length;
@@ -48,23 +43,9 @@ export class QuoteComponent implements OnInit {
     quote.downvotes = 0
     this.quotes.push(quote)
   }
-  upvoteQuote( index) {
-  this.quote.upvotes += 1;
-  }
-  downvoteQuote() {
-  this.quote.downvotes += 1;
-  }
-  submitQuote(){
-    this.addQuote.emit(this.newQuote)
-  }
 
-  // upvoteQuote (index){
-  //   value = isNan(value)? 0 : value;
-  //   value ++
-  // }
 
   constructor() {}
-
 
   ngOnInit(){
   }
