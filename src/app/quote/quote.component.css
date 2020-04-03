@@ -1,9 +1,11 @@
 font-family: 'Baloo Thambi 2', cursive;
 font-family: 'Gotu', sans-serif;
 font-family: 'Sen', sans-serif;
+
 h2 {
-  text-align: center;
+align-items: center;
   font-weight: bold;
+  font-family: 'Gotu';
 }
 .container{
   font-family: 'Sen';
@@ -20,4 +22,8 @@ button {
 .footer {
 text-align: center;
 padding: 2rem;
+}
+.col {
+display: table-cell;
+width: 25%;
 }

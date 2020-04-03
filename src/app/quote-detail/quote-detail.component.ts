@@ -18,7 +18,6 @@ this.isComplete.emit(complete);
 quoteUpvote() {
 this.quote.upvotes += 1;
 }
-
 quoteDownvote() {
 this.quote.downvotes += 1;
 }

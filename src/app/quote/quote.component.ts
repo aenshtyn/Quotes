@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Quote } from '../quotes';
 
 @Component({
@@ -35,15 +36,21 @@ export class QuoteComponent implements OnInit {
     }
   }
 
-  addNewQuote(quote, index){
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
-    quote.createdDate = new Date(quote.createdDate)
-    quote.upvotes = 0
-    quote.downvotes = 0
-    this.quotes.push(quote)
+  addNewQuote(quotes, index){
+    let quotesLength = this.quotes.length;
+    quotes.id = quotesLength+1;
+    quotes.createdDate = new Date(quotes.createdDate)
+    quotes.upvotes = 0
+    quotes.downvotes = 0
+    this.quotes.push(quotes)
+  }
+  quoteUpvote() {
+  this.quotes.upvotes += 1;
   }
 
+  quoteDownvote() {
+  this.quotes.downvotes += 1;
+  }
 
   constructor() {}
 

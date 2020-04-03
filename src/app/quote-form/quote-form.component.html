@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
-  <form (ngSubmit)='submitQuote()' #quoteForm = 'ngForm'>
+  <form (ngSubmit)="submitQuote(); quotesForm.resetForm({})" #quoteForm = 'ngForm'>
     <div class="form-group">
 
       <label for="name">Name</label>
@@ -32,8 +32,8 @@
     <div class="form-group">
 
       <label for="complete">Composed date</label>
-      <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
-      <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+      <input type='date' id="complete" [(ngModel)]="newQuote.createdDate" name="completeDate" #createdDate="ngModel" required>
+      <div [hidden]="createdDate.valid || createdDate.pristine" class="alert alert-danger">
         <p>Date is required</p>
       </div>
     </div>
