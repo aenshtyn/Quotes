@@ -44,13 +44,13 @@ export class QuoteComponent implements OnInit {
     quotes.downvotes = 0
     this.quotes.push(quotes)
   }
-  quoteUpvote() {
-  this.quotes.upvotes += 1;
-  }
-
-  quoteDownvote() {
-  this.quotes.downvotes += 1;
-  }
+  // quoteUpvote() {
+  // this.quotes.upvotes += 1;
+  // }
+  //
+  // quoteDownvote() {
+  // this.quotes.downvotes += 1;
+  // }
 
   constructor() {}
 
